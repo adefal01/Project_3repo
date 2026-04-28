@@ -3,7 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, Button, StyleSheet } from 'reac
 
 const API_KEY = 'GjEyGoppMBHIK3djpaWpkWCxb2pISygE';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen({navigation}) {
   const [events, setEvents] = useState([]);
   const [filter, setFilter] = useState('all');
 

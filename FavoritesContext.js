@@ -12,7 +12,7 @@ export const FavoritesProvider = ({children}) => {
   };
 
   return (
-    <FavoritesContext.Provider value={{ favorites, addFavorite }}>
+    <FavoritesContext.Provider value={{favorites, addFavorite}}>
       {children}
     </FavoritesContext.Provider>
   );

@@ -1,9 +1,9 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useFavorites } from './FavoritesContext';
 
-export default function EventDetailScreen({ route }) {
-  const { id, title, date, venue, address } = route.params;
-  const { addFavorite, favorites } = useFavorites();
+export default function EventDetailScreen({route}) {
+  const {id, title, date, venue, address} = route.params;
+  const {addFavorite, favorites} = useFavorites();
 
   const isSaved = favorites.some(fav => fav.id === id);
 
@@ -16,7 +16,7 @@ export default function EventDetailScreen({ route }) {
       <Text style={styles.saved}>{isSaved ? 'Saved to Favorites!' : ''}</Text>
       <Button 
         title={isSaved ? 'Saved' : 'Save to Favorites'} 
-        onPress={() => addFavorite({ id, title, date, venue, address })} 
+        onPress={() => addFavorite({id, title, date, venue, address})} 
         disabled={isSaved} 
       />
     </View>
